@@ -26,6 +26,7 @@ document.addEventListener('DOMContentLoaded', function () {
         var quantitySelector = document.createElement('div');
         quantitySelector.className = 'custom-quantity-selector';
         quantitySelector.style.paddingTop = '10px';
+        quantitySelector.style.paddingBottom = '10px';
 
         var plusButton = document.createElement('button');
         plusButton.textContent = '+';
@@ -70,9 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function updateQuantityDisplay() {
-            var participantText = selectedQuantity === 1 ? 'participant' : 'participants';
-            quantitySpan.textContent = selectedQuantity + ' ' + participantText;
-            updatePrice();
+            quantitySpan.textContent = selectedQuantity;
         }
 
         function updatePrice() {
