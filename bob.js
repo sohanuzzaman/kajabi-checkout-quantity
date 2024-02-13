@@ -26,7 +26,6 @@ document.addEventListener('DOMContentLoaded', function () {
         var quantitySelector = document.createElement('div');
         quantitySelector.className = 'custom-quantity-selector';
         quantitySelector.style.paddingTop = '10px';
-        quantitySelector.style.paddingBottom = '10px';
 
         var plusButton = document.createElement('button');
         plusButton.textContent = '+';
@@ -71,8 +70,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         function updateQuantityDisplay() {
-            quantitySpan.textContent = selectedQuantity;
+            quantitySpan.textContent = selectedQuantity; // Only display the number
+            updatePrice();
         }
+
 
         function updatePrice() {
             var totalPrice = basePrice + (selectedQuantity - 1) * additionalPricePerParticipant;
