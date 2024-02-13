@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', function () {
         minusButton.style.marginRight = '5px';
 
         var quantitySpan = document.createElement('span');
-        quantitySpan.textContent = '1 participant'; // Default quantity to 1
+        quantitySpan.textContent = '1'; // Default quantity to 1
 
         quantitySelector.appendChild(minusButton);
         quantitySelector.appendChild(quantitySpan);
